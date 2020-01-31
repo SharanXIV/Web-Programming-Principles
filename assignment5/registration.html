@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Assignment 5 - Sharan Shanmugaratnam </title>
+    <link rel="stylesheet" href="normalize1.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
+    <script src="registration.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+        <img src="sailboat.png" alt="logo" width="80" height="80">
+        <h2>Sharan's Sailboats</h2>
+        <img src="sailboat.png" alt="logo" width="80" height="80">
+    </header>
+    <nav>
+        <h3>Menu</h3>
+        <ul>
+            <li>
+                <a href="index.html">Index</a>
+            </li>
+            <li>
+                <a href="registration.html">Registration</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <h1> Registration </h1>
+        <div id=form>
+            <form id="signup" name="signup" method="post" action="https://httpbin.org/post" onsubmit="return formValidation();">
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" id="firstName" required="required" />
+                <br>
+
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" id="lastName" required="required" />
+                <br>
+                <br>
+
+                <label for="unitNo">Unit #:</label>
+                <input type="number" name="unitNo" id="unitNo" required="required" />
+                <br>
+
+                <label for="streetNo">Street #:</label>
+                <input type="number" name="streetNo" id="streetNo" required="required" />
+                <br>
+
+                <label for="streetName">Street Name:</label>
+                <input type="text" name="streetName" id="streetName" required="required" />
+                <br>
+
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" required="required" onchange="validCity()" />
+                <br>
+
+                <label for="province">Province:</label>
+                <select id="provs" list="provs" name="province" id="province" required="required" onchange="validProvince()">
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="Ontario" selected>Ontario</option>
+                    <option value="Prince Edward Island">Prince Edward Island</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Sasketchewan">Sasketchewan</option>
+                </select>
+                <br>
+
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" name="postalCode" id="postalCode" placeholder="A1A2N2" required="required" onchange="validPostalCode()"
+                />
+                <br>
+
+                <label for="phoneNo">Phone Number:</label>
+                <input type="tel" name="phoneNo" id="phoneNo" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="212-221-2112" required="required"
+                />
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="test@example.com" id="email" required="required" />
+                <br>
+                <br>
+
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required="required" onchange="validUsername()" />
+                <br>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required="required" onchange="validPassword()" />
+                <br>
+
+                <label for="password2">Re-type Password:</label>
+                <input type="password" name="password2" id="password2" required="required" onchange="validPassword2()" />
+                <br>
+
+                <input type="hidden" name="lName" id="lName" value="Shanmugaratnam" />
+                <input type="hidden" name="studentId" id="studentId" value="153601174" />
+                <br>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear" onclick="clearErrors()" />
+            </form>
+        </div>
+    </section>
+    <aside>
+        <h3>Errors</h3>
+        <div id="cityError"></div>
+        <div id="provinceError"></div>
+        <div id="postalCodeError"></div>
+        <div id="usernameError"></div>
+        <div id="passwordError"></div>
+        <div id="password2Error"></div>
+
+    </aside>
+    <footer>
+        <p>Sharan Shanmugaratnam &copy; 2018</p>
+    </footer>
+</body>

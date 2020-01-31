@@ -1,0 +1,84 @@
+/* Place all of your CSS Code in this file */
+
+/********************************************************************************* 
+*
+* WEB222 – Assignment #4a
+*
+* I declare that this assignment is my own work in accordance with Seneca 
+* Academic Policy. No part of this assignment has been copied manually or 
+* electronically from any other source (including web sites) or distributed to 
+* other students. 
+* 
+* Name: Sharan Shanmugaratnam     Student ID: 153601174     Date: July 18th, 2018 
+* 
+********************************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
+/* Add a new font colour to the <body> element. */
+body{
+    color:darkslateblue;
+}
+
+/* Add a new background colour to the <nav> and <footer> elements. */
+nav, footer{
+    background-color: darkslateblue;
+    color:lightcyan;
+    font-family: 'Allura', cursive;
+    text-align: right;
+}
+
+/* Style the <header></header> element using at least 2 properties. */
+header{
+    text-align: center;
+    height: 80px;
+}
+
+/* Style the <h1 class="app-title"></h1> using at least 3 properties. One of these properties must be
+setting the font to a "web-font", available on the Google Fonts CDN. */
+h1.app-title{
+    font-family: 'Allura', cursive;
+    font-size: 33pt;
+    color: darkslateblue;
+}
+
+/*Style the <div class="main-table-container"></div> using at least 3 properties, two of which must be
+to ensure that it has:
+    - a maximum height value
+    - a vertical scroll bar
+This will allow our table to scroll, instead of taking up a ton of vertical space on the page.*/
+.main-table-container{
+    max-height: 800px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/* Add at least 4 style properties to the <th></th> elements inside the <table class="main-tabletop">
+</table> element. This will ensure that the top (stationary) row of our table looks distinctive. */
+.main-table-top th{
+    background-color:lightcyan;
+    color:darkslateblue;
+    font-size: 20px;
+    font-family: 'Allura', cursive;
+}
+
+/* Add at least 4 style properties to the <td></td> elements inside the <table class="maintable"></
+table> element. This will ensure that the cells within our main table have appropriate spacing
+and are styled to match the rest of the page. */
+.main-table td {
+    border-style: solid;
+    border-width: 1px;
+    border-color:cyan;
+    background: darkslateblue;
+    color:lightcyan;
+    margin-bottom: 15px;    
+}
+
+/* Add at least 2 properties to all <span></span> elements that are used for the description of the pets.
+These <span></span> elements will be located inside <p></p> elements within the <table class="maintable">
+</table> element. This will ensure that anytime a <span></span> element is used in the description of a
+pet, the text will be highlighted. */
+.main-table span{
+    font-weight:bold;
+    padding: 3px;
+}
